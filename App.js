@@ -13,10 +13,11 @@ function changename(event){
   fetch(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apikey}&user_id=197774016%40N02&tags=${name}&per_page=20&page=1&format=json&nojsoncallback=1&`).then((res)=>{
         return res.json()
         
-   }).then((data)=>{setdata(data.photos.photo)})
+   }).then((data)=>{setdata(data.photos.photo)
+    console.log(data.photos.photo)})
 
    .catch((err)=>{console.log(err)})
-   //console.log(data)
+   
   }
  console.log(data)
   return (
